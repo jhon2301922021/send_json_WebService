@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-import uvicorn
+from pyngrok import ngrok
 
 app = FastAPI()
 
@@ -21,8 +21,3 @@ def add_user(user: User):
 
     # Devolver una respuesta
     return {"message": "Usuario agregado exitosamente", "user": user.dict()}
-
-# Ejecutar la aplicación
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)  # Iniciar el servidor en el puerto 8000
-
