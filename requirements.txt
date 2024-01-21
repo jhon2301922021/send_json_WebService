@@ -2,3 +2,5 @@ fastapi
 uvicorn[standard]
 pydantic
 pyngrok
+gunicorn
+Flask
