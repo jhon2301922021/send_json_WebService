@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+#from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import uvicorn
 import json
@@ -16,9 +16,9 @@ class User(BaseModel):
         name: Nombre del usuario.
         email: Email del usuario.
     """
-    id: int       
-    name: str    
-    email: str   
+    id: int
+    name: str
+    email: str
 
 # Definimos el modelo de datos para el ID de usuario
 class User_ID(BaseModel):
@@ -169,4 +169,3 @@ if __name__ == "__main__":
     # host="0.0.0.0" permite acceder al servidor desde cualquier dirección
     # port=8000 es el puerto en el que se iniciará el servidor
     uvicorn.run(app, host="0.0.0.0", port=8000)
-
